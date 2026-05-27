@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || process.argv[2] || 3000;
-const IMAGE_FOLDERS = ['folder1', 'folder2', 'folder3', 'folder4'];
+const IMAGE_FOLDERS = ['folder1', 'folder2', 'folder3', 'folder4', 'folder5', 'folder6'];
 const PUBLIC_DIR = path.join(__dirname, 'public');
 
 const validExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.bmp'];
@@ -30,7 +30,7 @@ app.use('/images', express.static(__dirname));
 app.get('/api/images/:folderId', (req, res) => {
   const id = parseInt(req.params.folderId, 10);
   if (Number.isNaN(id) || id < 1 || id > IMAGE_FOLDERS.length) {
-    return res.status(400).json({ error: 'Invalid folder id. Use 1 to 4.' });
+    return res.status(400).json({ error: 'Invalid folder id. Use 1 to 6.' });
   }
 
   const folderName = IMAGE_FOLDERS[id - 1];

@@ -1,4 +1,4 @@
-const folders = [1, 2, 3, 4];
+const folders = [1, 2, 3, 4, 5, 6];
 const folderState = {};
 const supportedExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.bmp'];
 
