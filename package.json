@@ -1,0 +1,15 @@
+{
+  "name": "photo-display-localhost",
+  "version": "1.0.0",
+  "description": "Local photo display slideshow with 4 folder-based quadrants and live updates.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "stop": "bash -lc 'lsof -ti:3000 | xargs -r kill -9 || true'"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.4"
+  }
+}
